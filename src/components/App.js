@@ -1,19 +1,15 @@
-import React, { useState } from "react";
+
+import React from "react";
 import './../styles/App.css';
-const Timer = () => {
-  const [seconds, setSeconds] = useState(0);
+import Timer from "./Timer";
 
-  const handleOnMount = () => {
-    setInterval(() => {
-      setSeconds(seconds + 1);
-    }, 1000);
-  };
-
+const App = () => {
   return (
     <div>
-      <p>You've been on this page for {seconds} seconds.</p>
+      {/* Do not remove the main div */}
+      <Timer />
     </div>
-  );
-};
+  )
+}
 
-export default Timer;
+export default App
